@@ -102,7 +102,7 @@ const OutsourceLogin = () => {
         <button type="submit">Login</button>
       </form>
 
-      {/* 🔹 FORGOT / RESET LINKS */}
+      {/*  FORGOT / RESET LINKS */}
       <div className="auth-links">
         <button type="button" onClick={handleForgotPassword}>
           Forgot Password?
@@ -116,7 +116,7 @@ const OutsourceLogin = () => {
         </button>
       </div>
 
-      {/* 🔹 RESET PASSWORD BOX */}
+      {/*  RESET PASSWORD BOX */}
       {showReset && (
         <div className="reset-box">
           <input

@@ -349,70 +349,14 @@ const AdminDashboard = () => {
 
   return (
     <div className={`admin-layout ${darkMode ? "dark" : "light"}`}>
-{/* <button
-  onClick={() => setDarkMode(!darkMode)}
-  style={{
-    position: "fixed",
-    top: "10px",
-    right: "10px",
-    zIndex: 9999,
-    padding: "12px 16px",
-    fontSize: "16px",
-    background: "orange",
-    border: "none",
-    borderRadius: "6px",
-    cursor: "pointer"
-  }}
->
-  {darkMode ? "☀ LIGHT MODE" : "🌙 DARK MODE"}
-</button> */}
 
 
-    {/* // <div className="admin-layout"> */}
-      {/* <aside className="sidebar">
-        <h2 className="logo">Admin Dashboard</h2>
-        <button onClick={() => setActiveTab("dashboard")}>Dashboard</button>
-        <button onClick={() => setActiveTab("hr")}>HR</button>
-        <button onClick={() => setActiveTab("employee")}>Employee</button>
-        <button onClick={() => setActiveTab("outsource")}>Outsource</button>
-        <button onClick={() => navigate("/register")}>+ Register User</button>
-        <button className="logout" onClick={() => navigate("/login-selection")}>Logout</button>
-      </aside> */}
-{/* <aside className="sidebar">
-  <h2 className="logo">Admin Dashboard</h2>
-
-  <ul className="sidebar-menu">
-    <li onClick={() => setActiveTab("dashboard")}>Dashboard</li>
-    <li onClick={() => setActiveTab("hr")}>HR</li>
-    <li onClick={() => setActiveTab("employee")}>Employee</li>
-    <li onClick={() => setActiveTab("outsource")}>Outsource</li>
-    <li onClick={() => navigate("/register")} className="register">
-      + Register User
-    </li>
-    <li
-      onClick={() => navigate("/login-selection")}
-      className="logout"
-    >
-      Logout
-    </li>
-  </ul>
-</aside> */}
 <aside className="sidebar">
   <h2 className="logo">Admin Dashboard</h2>
 
   <ul className="sidebar-menu">
 
-    {/* 🌙☀ DARK / LIGHT TOGGLE — GUARANTEED VISIBLE
-    <li
-      onClick={() => setDarkMode(!darkMode)}
-      style={{
-        fontWeight: "bold",
-        background: "#ddd",
-        marginBottom: "12px"
-      }}
-    >
-      {darkMode ? "☀ Light Mode" : "🌙 Dark Mode"}
-    </li> */}
+    
 
     <li onClick={() => setActiveTab("dashboard")}>Dashboard</li>
     <li onClick={() => setActiveTab("hr")}>HR</li>
@@ -432,9 +376,7 @@ const AdminDashboard = () => {
 
 
       <main className="main-content">
-        {/* <div className="top-bar">
-          <h1>{activeTab === "dashboard" ? "Admin Dashboard" : activeTab.toUpperCase()}</h1>
-        </div> */}
+        
        <div className="top-bar">
   <h1>
     {activeTab === "dashboard"
@@ -442,18 +384,7 @@ const AdminDashboard = () => {
       : activeTab.toUpperCase()}
   </h1>
 
-  {/* 🌙☀ TOGGLE BUTTON
-  <button
-    onClick={() => setDarkMode(!darkMode)}
-    style={{
-      padding: "6px 12px",
-      borderRadius: "6px",
-      border: "none",
-      cursor: "pointer"
-    }}
-  >
-    {darkMode ? "☀ Light Mode" : "🌙 Dark Mode"}
-  </button> */}
+  
 </div>
 
 
@@ -523,114 +454,3 @@ const AdminDashboard = () => {
 };
 
 export default AdminDashboard;
-// useEffect(() => {
-//     document.body.style.background = darkMode ? "#121212" : "#f4f6f8";
-//     document.body.style.color = darkMode ? "#ffffff" : "#000000";
-//   }, [darkMode]);
-
-  /* ================= DATA LOGIC ================= */
-//   useEffect(() => {
-//     let combined = [];
-
-//     if (activeTab === "dashboard") {
-//       combined = [...mockData.hr, ...mockData.employee, ...mockData.outsource];
-//     } else if (activeTab === "hr") {
-//       combined = [...mockData.hr];
-//     } else if (activeTab === "employee") {
-//       combined = [...mockData.employee];
-//     } else if (activeTab === "outsource") {
-//       combined = [...mockData.outsource];
-//     }
-
-//     let result = combined.filter(emp =>
-//       emp.name.toLowerCase().includes(search.toLowerCase())
-//     );
-
-//     if (filterBy === "Role") {
-//       result = [...result].sort((a, b) => a.role.localeCompare(b.role));
-//     }
-
-//     if (filterBy === "Joined") {
-//       result = [...result].sort(
-//         (a, b) => new Date(a.joined) - new Date(b.joined)
-//       );
-//     }
-
-//     setData(result);
-//   }, [activeTab, search, filterBy]);
-
-//   return (
-//     <div className="admin-layout">
-
-
-//       {/* ✅ GUARANTEED VISIBLE TOGGLE */}
-//       <button
-//         onClick={() => setDarkMode(!darkMode)}
-//         style={{
-//           position: "fixed",
-//           top: "12px",
-//           right: "12px",
-//           zIndex: 9999,
-//           padding: "10px 14px",
-//           background: darkMode ? "#fff" : "#000",
-//           color: darkMode ? "#000" : "#fff",
-//           border: "none",
-//           borderRadius: "6px",
-//           cursor: "pointer"
-//         }}
-//       >
-//         {darkMode ? "☀ Light Mode" : "🌙 Dark Mode"}
-//       </button>
-
-//       {/* ================= SIDEBAR ================= */}
-//       <aside className="sidebar">
-//         <h2>Admin</h2>
-//         <button onClick={() => setActiveTab("dashboard")}>Dashboard</button>
-//         <button onClick={() => setActiveTab("hr")}>HR</button>
-//         <button onClick={() => setActiveTab("employee")}>Employee</button>
-//         <button onClick={() => setActiveTab("outsource")}>Outsource</button>
-//         <button onClick={() => navigate("/login-selection")}>Logout</button>
-//       </aside>
-
-//       {/* ================= MAIN ================= */}
-//       <main className="main-content">
-//         <h1>{activeTab.toUpperCase()}</h1>
-
-//         <div className="table-controls">
-//           <input
-//             placeholder="Search..."
-//             value={search}
-//             onChange={(e) => setSearch(e.target.value)}
-//           />
-
-//           <select value={filterBy} onChange={(e) => setFilterBy(e.target.value)}>
-//             <option value="">Filter</option>
-//             <option value="Role">Role</option>
-//             <option value="Joined">Joined</option>
-//           </select>
-//         </div>
-
-//         <table>
-//           <thead>
-//             <tr>
-//               <th>Name</th>
-//               <th>Role</th>
-//               <th>Joined</th>
-//             </tr>
-//           </thead>
-//           <tbody>
-//             {data.map(emp => (
-//               <tr key={emp.id}>
-//                 <td>{emp.name}</td>
-//                 <td>{emp.role}</td>
-//                 <td>{emp.joined}</td>
-//               </tr>
-//             ))}
-//           </tbody>
-//         </table>
-//       </main>
-//     </div>
-//   );
-// };
-
-// export default AdminDashboard;

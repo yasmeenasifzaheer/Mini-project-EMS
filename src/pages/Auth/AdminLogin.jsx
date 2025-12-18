@@ -91,12 +91,7 @@ const AdminLogin = () => {
 
         <button type="submit">Login</button>
       </form>
-
-      {/* OPTIONAL (same as HR)
-      <div className="auth-links">
-        <button type="button">Forgot Password?</button>
-        <button type="button">Reset Password</button>
-      </div> */}
+    
     </div>
   );
 };
