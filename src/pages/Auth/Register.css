@@ -1,0 +1,79 @@
+/* ================= REGISTER CONTAINER ================= */
+.register-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  font-family: 'Inter', sans-serif;
+}
+
+/* TITLE */
+.register-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* INPUT FIELDS */
+.register-container input,
+.register-container select {
+  width: 100%;
+  padding: 10px 12px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  box-sizing: border-box;
+  transition: border 0.3s;
+}
+
+.register-container input:focus,
+.register-container select:focus {
+  border-color: #6c63ff;
+  outline: none;
+}
+
+/* BUTTONS */
+.register-container button {
+  padding: 10px 15px;
+  font-size: 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.register-container button[type="submit"] {
+  background-color: #6c63ff;
+  color: white;
+}
+
+.register-container button[type="submit"]:hover {
+  background-color: #574fd6;
+}
+
+.register-container button[type="button"] {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+.register-container button[type="button"]:hover {
+  background-color: #e0e0e0;
+}
+
+/* FORM BUTTONS CONTAINER */
+.register-container div {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 15px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 500px) {
+  .register-container {
+    margin: 20px;
+    padding: 20px;
+  }
+}

@@ -1,0 +1,53 @@
+.auth-links {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Forgot & Reset buttons */
+.auth-links button {
+  background: none;
+  border: none;
+  color: #2563eb;
+  font-size: 13px;
+  cursor: pointer;
+  padding: 0;
+  font-weight: 400;
+}
+
+.auth-links button:hover {
+  text-decoration: underline;
+}
+
+/* Reset password box */
+.reset-box {
+  margin-top: 10px;
+}
+
+.reset-box input {
+  width: 100%;
+  padding: 6px;
+  margin-bottom: 6px;
+  font-size: 13px;
+}
+
+.reset-box button {
+  width: 100%;
+  padding: 6px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+/* Success message */
+.info {
+  color: #16a34a;
+  font-size: 13px;
+  margin-top: 6px;
+}
+
+/* Error message */
+.error {
+  color: #dc2626;
+  font-size: 13px;
+  margin-top: 6px;
+}

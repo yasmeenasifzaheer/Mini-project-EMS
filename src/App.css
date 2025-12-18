@@ -1,0 +1,39 @@
+/* src/App.css */
+:root{
+  --bg: #f5f7fb;
+  --card: #fff;
+  --text: #222;
+  --muted: #666;
+  --accent: #1e90ff;
+  --card-shadow: 0 6px 20px rgba(0,0,0,0.06);
+  font-family: 'Roboto', Arial, sans-serif;
+}
+
+body.dark {
+  --bg: #0f1724;
+  --card: #0b1220;
+  --text: #e6eef8;
+  --muted: #9aa7bf;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: inherit;
+  min-height: 100vh;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: var(--card-shadow);
+}
+
+.card.small { padding: 12px; }
+.card .muted { color: var(--muted); font-size: 13px; }
+
+/* small utility */
+button { background: var(--accent); color: #fff; border: none; padding: 8px 12px; border-radius: 6px; }
+a { color: var(--accent); text-decoration: none; }

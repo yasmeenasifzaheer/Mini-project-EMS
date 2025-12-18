@@ -1,0 +1,83 @@
+.login-container {
+  width: 360px;
+  margin: 100px auto;
+  background: #f8fafc;
+  padding: 30px 28px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  font-family: "Segoe UI", sans-serif;
+}
+
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 22px;
+  color: #1f2937;
+  font-weight: 600;
+}
+
+.login-container form div {
+  margin-bottom: 14px;
+}
+
+.login-container label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #374151;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+}
+
+.login-container input:focus {
+  border-color: #f87171;
+  outline: none;
+}
+
+.login-container button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 11px;
+  border-radius: 8px;
+  border: none;
+  background: #f87171;
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.login-container button:hover {
+  background: #ef4444;
+}
+
+.error {
+  color: #dc2626;
+  font-size: 13px;
+  margin-top: 6px;
+  text-align: center;
+}
+
+/* LINKS */
+.auth-links {
+  margin-top: 14px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.auth-links button {
+  background: none;
+  border: none;
+  color: #2563eb;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.auth-links button:hover {
+  text-decoration: underline;
+}
