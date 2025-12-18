@@ -18,6 +18,9 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   build: {
-    cssMinify: 'esbuild'  // Fixes LightningCSS parsing error [attached_file:1][web:13]
-  }
+    cssMinify: false
+  },
+  base: './'  // Use relative paths instead of absolute /assets/
 })
+
+
